@@ -17,4 +17,5 @@ games.forEach(game=>{
         </div>
     
     `;
+     gameCards.appendChild(card);
 });
