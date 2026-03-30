@@ -23,8 +23,9 @@ games.forEach(game=>{
 
      const button= document.querySelector('.add');
      button.addEventListener('click',()=>{
-    ajourt(game);
-     });
+    cart.push(game);
+    localStorage.setItem('cart',JSON.stringify(cart));
+     });   alert(`${game.title}ajouté au panier`)
 
 });
 
