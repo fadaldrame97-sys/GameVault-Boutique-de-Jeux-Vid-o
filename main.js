@@ -1,3 +1,18 @@
+
+
 const gameCards=document.getElementById('gameContainer');
 
-games.forEach(game=>{});
+games.forEach(game=>{
+    const card=document.createElement("div");
+    card.className= "bg-white rounded-lg shadow-md overflow-hidden m-2";
+    card.innerHTML=`
+    <img src="${game.image}" class="w-full h-48 object-cover">
+     <div class="p-4">
+            <h2 class="font-bold text-lg">${game.title}</h2>
+            <p class="text-gray-600">${game.price} DH</p>
+
+           
+        </div>
+    
+    `;
+});
