@@ -1,4 +1,4 @@
-
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // afficher les cards
 
 const gameCards=document.getElementById('gameContainer');
