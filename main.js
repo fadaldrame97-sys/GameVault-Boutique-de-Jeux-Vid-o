@@ -1,0 +1,1 @@
+const gameCards=document.getElementById('gameContainer');
