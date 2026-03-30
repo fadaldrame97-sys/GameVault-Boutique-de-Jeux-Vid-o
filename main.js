@@ -1,4 +1,5 @@
 
+// afficher les cards
 
 const gameCards=document.getElementById('gameContainer');
 
@@ -11,11 +12,19 @@ games.forEach(game=>{
             <h2 class="font-bold text-lg">${game.title}</h2>
             <p class="text-gray-600">${game.price} DH</p>
 
-            <button class="bg-yellow-500 border border-black text-white px-4 py-2 mt-2 rounded">
+            <button class=" add bg-yellow-500 border border-black text-white px-4 py-2 mt-2 rounded">
                 Ajouter au panier
             </button>
         </div>
     
     `;
      gameCards.appendChild(card);
+
+
+     const button= document.querySelector('.add');
+     button.addEventListener('click',()=>{
+    ajourt(game);
+     });
+
 });
+
