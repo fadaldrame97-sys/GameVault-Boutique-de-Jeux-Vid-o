@@ -48,4 +48,17 @@ affichierGames(filtrage);
 });
 affichierGames(games)
 
-const button=document.querySelectorAll('.category')
+const buttons=document.querySelectorAll('.category')
+buttons.forEach(button=>{
+const category = button.dataset.cat;
+
+        const filtered = games.filter(game =>
+            game.category === category
+        );
+
+        affichierGames(filtered);
+    });
+
+
+
+
