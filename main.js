@@ -47,3 +47,5 @@ affichierGames(filtrage);
 
 });
 affichierGames(games)
+
+const button=document.querySelectorAll('.category')
