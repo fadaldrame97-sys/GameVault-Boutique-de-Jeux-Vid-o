@@ -41,6 +41,6 @@ recherInput.addEventListener('recherInput',()=>{
 
 const value=recherInput.value.toLowerCase();
 
-games.filter(game=>game.title.toLowerCase().includes(value));
+const filtrage= games.filter(game=>game.title.toLowerCase().includes(value));
 
 });
