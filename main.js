@@ -43,4 +43,6 @@ const value=recherInput.value.toLowerCase();
 
 const filtrage= games.filter(game=>game.title.toLowerCase().includes(value));
 
+affichierGames(filtrage);
+
 });
