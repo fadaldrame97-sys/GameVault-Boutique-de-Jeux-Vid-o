@@ -39,6 +39,8 @@ const recherInput=document.getElementById("recherchInput");
 
 recherInput.addEventListener('recherInput',()=>{
 
-const value=recherInput.value.toUpperCase();
+const value=recherInput.value.toLowerCase();
+
+games.filter(game=>game.title.toLowerCase().includes(value));
 
 });
