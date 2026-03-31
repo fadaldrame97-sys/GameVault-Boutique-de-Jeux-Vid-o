@@ -3,6 +3,10 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const gameCards=document.getElementById('gameContainer');
 
+function affichierGames(){
+
+    gameCards.innerHTML="";
+
 games.forEach(game=>{
     const card=document.createElement("div");
     card.className= "bg-white rounded-lg shadow-md overflow-hidden m-2";
@@ -29,4 +33,12 @@ games.forEach(game=>{
      });  
 
 });
+}
 
+const recherInput=document.getElementById("recherchInput");
+
+recherInput.addEventListener('recherInput',()=>{
+
+const value=recherInput.value.toUpperCase();
+
+});
