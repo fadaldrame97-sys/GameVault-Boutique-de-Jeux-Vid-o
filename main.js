@@ -3,7 +3,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const gameCards=document.getElementById('gameContainer');
 
-function affichierGames(){
+function affichierGames(games){
 
     gameCards.innerHTML="";
 
@@ -37,7 +37,7 @@ games.forEach(game=>{
 
 const recherInput=document.getElementById("recherchInput");
 
-recherInput.addEventListener('recherInput',()=>{
+recherInput.addEventListener('input',()=>{
 
 const value=recherInput.value.toLowerCase();
 
@@ -46,3 +46,4 @@ const filtrage= games.filter(game=>game.title.toLowerCase().includes(value));
 affichierGames(filtrage);
 
 });
+affichierGames(games)
