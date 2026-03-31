@@ -21,11 +21,12 @@ games.forEach(game=>{
      gameCards.appendChild(card);
 
 
-     const button= document.querySelector('.add');
+     const button= card.querySelector('.add');
      button.addEventListener('click',()=>{
     cart.push(game);
     localStorage.setItem('cart',JSON.stringify(cart));
-     });   alert(`${game.title}ajouté au panier`)
+     alert(`${game.title}ajouté au panier`)
+     });  
 
 });
 
