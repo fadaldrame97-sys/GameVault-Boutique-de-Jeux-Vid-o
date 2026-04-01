@@ -8,6 +8,8 @@ function affichierGames(games){
     gameCards.innerHTML="";
 
 games.forEach(game=>{
+
+    
     const card=document.createElement("div");
     card.className= "bg-white rounded-lg shadow-md overflow-hidden m-2";
     card.innerHTML=`
@@ -49,14 +51,24 @@ affichierGames(filtrage);
 affichierGames(games)
 
 const buttons=document.querySelectorAll('.category')
+
+
 buttons.forEach(button=>{
+
+        button.addEventListener('click', () => {
+
 const category = button.dataset.cat;
 
-        const filtered = games.filter(game =>
-            game.category === category
-        );
+        if(category === "all"){
+            affichierGames(games);
+            return;
+        }
 
-        affichierGames(filtered);
+        const filteré = games.filter(game =>
+            game.category === category 
+        );   affichierGames(filteré);  });
+
+      
     });
 
 
