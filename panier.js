@@ -18,7 +18,7 @@ article.forEach(game => {
     <h2>${game.price}</h2>
    
       <div class=" flex flex-row gap-10">
-        <button class="mainus">-</button>
+        <button class="minus">-</button>
         <h2 class="qnt">1</h2> 
     <button class="plus">+</button>
      <button class="delet" class="text-red-700">X</button>
@@ -36,7 +36,7 @@ article.forEach(game => {
     `;  contenue.append(div);
 
 const plus = div.querySelector(".plus");
-const minus = div.querySelector(".minus");
+const mainus = div.querySelector(".minus");
 const efface = div.querySelector(".delet");
 const quantity = div.querySelector(".qnt");
 
@@ -48,6 +48,14 @@ quantity.textContent++;
 
 });
 
+
+mainus.addEventListener('click',()=>{
+
+ if (quantity.textContent > 1) {
+            quantity.textContent--;
+        }
+
+});
 
 
 
