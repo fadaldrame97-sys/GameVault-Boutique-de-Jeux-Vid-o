@@ -15,7 +15,7 @@ article.forEach(game => {
            
     <h2>${game.title}</h2>
     
-    <h2>${game.price}</h2>
+    <h2 class="price">${game.price}</h2>
    
       <div class=" flex flex-row gap-10">
         <button class="minus">-</button>
@@ -47,7 +47,7 @@ plus.addEventListener('click',()=>{
     
 quantity.textContent++;
 
-game.price.textContent++;
+prixElement.textContent=game.price*quantity.textContent+ "DH";
 
 });
 
