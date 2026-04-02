@@ -35,4 +35,4 @@ article.forEach(game => {
 const prixTotal=document.getElementById("prix-total");
 
 
-const total=0;
+const totale=0
