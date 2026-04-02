@@ -1,6 +1,8 @@
 const article=JSON.parse(localStorage.getItem('cart'))||[];
 
 const contenue=document.getElementById("panier-artcl");
+const prixTotal=document.getElementById("prix-total");
+let totale=0;
 
 article.forEach(game => {
 
@@ -8,7 +10,7 @@ article.forEach(game => {
     div.className = "border p-4 m-2 rounded";
   div.className ="flex flex-col  jsutify-center items-center gap-4 border p-4 m-2 rounded shadow";
     div.innerHTML=`
-      <img " src="${game.image}"
+     <img src="${game.image}" class="w-40">
            
     <h2>${game.title}</h2>
     <h2>${game.price}</h2>
@@ -30,9 +32,8 @@ article.forEach(game => {
     
     `;  contenue.append(div);
     
+
+    totale+=game.price;
 });
 
-const prixTotal=document.getElementById("prix-total");
-
-
-const totale=0
+prixTotal.textContent=`Total du panier : ${totale} DH`;
