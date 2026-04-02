@@ -22,7 +22,7 @@ article.forEach(game => {
 
       <div class=" flex flex-row gap-10"> 
       
-       <h1>le prix total </h1>
+       
       
       </div>
     
@@ -31,3 +31,8 @@ article.forEach(game => {
     `;  contenue.append(div);
     
 });
+
+const prixTotal=document.getElementById("prix-total");
+
+
+const total=0;
