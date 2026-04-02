@@ -19,9 +19,10 @@ article.forEach(game => {
     <h2>+</h2>
       </div>
 
+
       <div class=" flex flex-row gap-10"> 
       
-      
+       <h1>le prix total </h1>
       
       </div>
     
