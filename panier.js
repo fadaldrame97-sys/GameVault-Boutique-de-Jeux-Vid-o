@@ -36,4 +36,4 @@ article.forEach(game => {
     totale+=game.price;
 });
 
-prixTotal.textContent=`Total du panier : ${totale} DH`;
+prixTotal.textContent=`${totale} DH`;
