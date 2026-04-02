@@ -39,12 +39,15 @@ const plus = div.querySelector(".plus");
 const mainus = div.querySelector(".minus");
 const efface = div.querySelector(".delet");
 const quantity = div.querySelector(".qnt");
+const prixElement = div.querySelector(".price");
 
 
 plus.addEventListener('click',()=>{
 
     
 quantity.textContent++;
+
+game.price.textContent++;
 
 });
 
