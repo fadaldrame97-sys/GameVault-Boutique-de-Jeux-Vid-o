@@ -4,6 +4,14 @@ const contenue=document.getElementById("panier-artcl");
 
 cart.forEach(element => {
 
+    const div=document.createElement('div');
+
+    div.innerHTML=`
     
+    
+    
+    
+    
+    `;
     
 });
