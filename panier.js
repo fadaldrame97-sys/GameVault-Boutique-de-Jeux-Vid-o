@@ -1,0 +1,1 @@
+const article=JSON.parse(localStorage.getItem('cart'))||[];
