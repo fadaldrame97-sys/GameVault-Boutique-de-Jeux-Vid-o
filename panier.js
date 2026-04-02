@@ -44,3 +44,10 @@ prixTotal.textContent=`${totale} DH`;
 const plus=document.getElementById("puls");
 const mainus=document.getElementById("mainus");
 const delet=document.getElementById("delet");
+
+
+plus.addEventListener('click',()=>{
+
+
+
+});
