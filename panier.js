@@ -13,6 +13,6 @@ cart.forEach(game => {
     
     
     
-    `;
+    `;  contenue.append(div);
     
 });
