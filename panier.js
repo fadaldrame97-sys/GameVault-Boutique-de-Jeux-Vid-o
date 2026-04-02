@@ -13,12 +13,14 @@ article.forEach(game => {
      <img src="${game.image}" class="w-40">
            
     <h2>${game.title}</h2>
+    
     <h2>${game.price}</h2>
    
       <div class=" flex flex-row gap-10">
         <h2>-</h2>
         <h2>1</h2> 
     <h2>+</h2>
+     <h2 class="text-red-700">X</h2>
       </div>
 
 
