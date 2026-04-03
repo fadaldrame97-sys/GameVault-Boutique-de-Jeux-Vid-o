@@ -71,12 +71,16 @@ let quantite=Number(quantity.textContent);
 
 });
 
-
-
-    
-
   
 });
 
 prixTotal.textContent=`${totale} DH`;
+
+
+efface.addEventListener('click',()=>{
+
+
+    
+});
+
 
