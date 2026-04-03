@@ -88,7 +88,7 @@ efface.addEventListener('click',()=>{
 function totalPanier(){
 
 let total =0;
-const toutlesDiv=
+const toutlesDiv=contenue.querySelectorAll('.cart-item');
 
 
 
