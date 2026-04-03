@@ -71,13 +71,6 @@ const category = button.dataset.cat;
       
     });
 
-function totalPanier(){
-
-
-
-
-
-}
 
 
 
