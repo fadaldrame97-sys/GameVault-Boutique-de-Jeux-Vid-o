@@ -79,8 +79,9 @@ prixTotal.textContent=`${totale} DH`;
 
 efface.addEventListener('click',()=>{
 
-
     
+
+
 });
 
 
