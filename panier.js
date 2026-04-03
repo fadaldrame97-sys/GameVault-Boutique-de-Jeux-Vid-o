@@ -40,6 +40,7 @@ const mainus = div.querySelector(".minus");
 const efface = div.querySelector(".delet");
 const quantity = div.querySelector(".qnt");
 const prixElement = div.querySelector(".price");
+const prixTotal = document.getElementById("prix-total");
 
 totale += game.price;
 plus.addEventListener('click', () => {
