@@ -71,6 +71,16 @@ let quantite=Number(quantity.textContent);
 
 
 });
+efface.addEventListener('click',()=>{
+
+ let quantite = Number(quantity.textContent);
+        totale-= game.price * quantite;
+        prixTotal.textContent = totale + " DH";
+        div.remove(); 
+
+
+});
+
 
   
 });
@@ -78,12 +88,6 @@ let quantite=Number(quantity.textContent);
 prixTotal.textContent=`${totale} DH`;
 
 
-efface.addEventListener('click',()=>{
-
-
-
-
-});
 
 function totalPanier(){
 
