@@ -90,6 +90,16 @@ function totalPanier(){
 let total =0;
 const toutlesDiv=contenue.querySelectorAll('.cart-item');
 
+toutlesDiv.forEach(div=>{
+const prix=Number(div.querySelector('.price').dataset.price);
+const qntit=Number(div.querySelector('.qnt').textContent);
+
+total+=prix*qntit;
+
+
+
+}); prixTotal.textContent=total+"DH";
+
 
 
 }
