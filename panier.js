@@ -3,7 +3,7 @@ const article=JSON.parse(localStorage.getItem('cart'))||[];
 const contenue=document.getElementById("panier-artcl");
 const prixTotal=document.getElementById("prix-total");
 
-let totale=0;
+let totale=0
 
 article.forEach(game => {
 
@@ -21,7 +21,7 @@ article.forEach(game => {
         <button class="minus">-</button>
         <h2 class="qnt">1</h2> 
     <button class="plus">+</button>
-     <button class="delet" class="text-red-700">X</button>
+     <button  class=" delet text-red-700">X</button>
       </div>
 
 
@@ -41,22 +41,33 @@ const efface = div.querySelector(".delet");
 const quantity = div.querySelector(".qnt");
 const prixElement = div.querySelector(".price");
 
+totale += game.price;
+plus.addEventListener('click', () => {
 
-plus.addEventListener('click',()=>{
+    let quantite = Number(quantity.textContent);
 
-    
-quantity.textContent++;
+    quantite++;
+    quantity.textContent = quantite;
 
-prixElement.textContent=game.price*quantity.textContent+ "DH";
+    prixElement.textContent = game.price * quantite + " DH";
 
+    totale += game.price;
+    prixTotal.textContent = totale + " DH";
 });
-
-
 mainus.addEventListener('click',()=>{
 
- if (quantity.textContent > 1) {
-            quantity.textContent--;
-        }
+let quantite=Number(quantity.textContent);
+
+ if (quantite > 1) {
+           quantite--;
+           quantity.textContent=quantite;
+
+    prixElement.textContent=game.price* quantite+ "DH";        
+        
+  totale -= game.price;
+        prixTotal.textContent = totale + " DH";
+}
+
 
 });
 
@@ -64,7 +75,7 @@ mainus.addEventListener('click',()=>{
 
     
 
-    totale+=game.price;
+  
 });
 
 prixTotal.textContent=`${totale} DH`;
