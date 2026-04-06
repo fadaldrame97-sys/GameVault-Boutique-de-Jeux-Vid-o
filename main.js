@@ -1,5 +1,7 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// afficher les cards
+
+
+// afficher les carts
 
 const gameCards=document.getElementById('gameContainer');
 
@@ -17,15 +19,17 @@ games.forEach(game=>{
      <div class="p-4">
             <h2 class="font-bold text-lg">${game.title}</h2>
             <p class="text-gray-600">${game.price} DH</p>
-
+       
             <button class=" add bg-yellow-500 border border-black text-white px-4 py-2 mt-2 rounded">
                 Ajouter au panier
             </button>
         </div>
     
     `;
+
      gameCards.appendChild(card);
 
+// sauvegarder dans localStorage
 
      const button= card.querySelector('.add');
      button.addEventListener('click',()=>{
@@ -36,6 +40,8 @@ games.forEach(game=>{
 
 });
 }
+
+// Rechercher un jeux
 
 const recherInput=document.getElementById("recherchInput");
 
@@ -49,6 +55,9 @@ affichierGames(filtrage);
 
 });
 affichierGames(games)
+
+
+// filterer par categories
 
 const buttons=document.querySelectorAll('.category')
 
