@@ -1,3 +1,5 @@
+// afficher les articles ajoutés depuis le localStorage
+
 const article=JSON.parse(localStorage.getItem('cart'))||[];
 
 const contenue=document.getElementById("panier-artcl");
@@ -35,6 +37,8 @@ article.forEach(game => {
     
     `;  contenue.append(div);
 
+    // cibler les button pour manipuler les quantitiés
+
 const plus = div.querySelector(".plus");
 const mainus = div.querySelector(".minus");
 const efface = div.querySelector(".delet");
@@ -43,7 +47,10 @@ const prixElement = div.querySelector(".price");
 const prixTotal = document.getElementById("prix-total");
 const commande= document.getElementById("commande");
 
+// augementer la quantité
+
 totale += game.price;
+
 plus.addEventListener('click', () => {
 
     let quantite = Number(quantity.textContent);
@@ -56,6 +63,9 @@ plus.addEventListener('click', () => {
     totale += game.price;
     prixTotal.textContent = totale + " DH";
 });
+
+// diminuer la quantité
+
 mainus.addEventListener('click',()=>{
 
 let quantite=Number(quantity.textContent);
@@ -72,6 +82,10 @@ let quantite=Number(quantity.textContent);
 
 
 });
+
+
+// Effacer un article dans le panier
+
 efface.addEventListener('click',()=>{
 
  let quantite = Number(quantity.textContent);
@@ -89,6 +103,7 @@ efface.addEventListener('click',()=>{
 prixTotal.textContent=`${totale} DH`;
 
 
+// calculer le total du panier
 
 function totalPanier(){
 
@@ -105,6 +120,8 @@ total+=prix*qntit;
 }); prixTotal.textContent=total+"DH";
 
 }
+
+// gestion de la commande
 
 commande.addEventListener('click',()=>{
 
