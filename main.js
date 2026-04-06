@@ -31,7 +31,7 @@ games.forEach(game=>{
      button.addEventListener('click',()=>{
     cart.push(game);
     localStorage.setItem('cart',JSON.stringify(cart));
-     alert(`${game.title}ajouté au panier`)
+     alert(`${game.title}  est ajouté au panier`)
      });  
 
 });
