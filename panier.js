@@ -138,3 +138,18 @@ commande.textContent="Y a pas de commande";
 
 });
 
+
+const comnd=document.getElementById("btn-commande");
+
+comnd.addEventListener('click',()=>{
+
+  contenue.innerHTML="";
+  alert("Commande validee ! Merci pour votre achat");
+  prixTotal.textContent="0dh"
+
+  localStorage.removeItem("article");
+
+
+
+});
+
